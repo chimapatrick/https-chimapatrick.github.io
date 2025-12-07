@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chima Patrick O – Penetration Tester Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #050810;
+      --card: #0f172a;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.15);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #0b1120 0, #020617 50%, #000 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      gap: 1rem;
+    }
+    .title-block h1 {
+      font-size: 2.1rem;
+      letter-spacing: 0.04em;
+    }
+    .title-block p {
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+    .contact {
+      text-align: right;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent-soft);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .contact {
+        text-align: left;
+      }
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: 1rem;
+      border: 1px solid var(--border);
+      padding: 1.3rem 1.4rem;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.6rem;
+    }
+    .chip {
+      padding: 0.1rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    section {
+      margin-bottom: 2.2rem;
+    }
+    section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+    .section-sub {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 1.25rem;
+    }
+    @media (max-width: 900px) {
+      .projects {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+    .project {
+      background: var(--card);
+      border-radius: 0.9rem;
+      padding: 1.1rem 1.2rem;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .project::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(
+        circle at top left,
+        rgba(56, 189, 248, 0.12),
+        transparent 60%
+      );
+      opacity: 0.8;
+      pointer-events: none;
+    }
+    .project h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      position: relative;
+      z-index: 1;
+    }
+    .project small {
+      color: var(--muted);
+      font-size: 0.8rem;
+      position: relative;
+      z-index: 1;
+    }
+    .project p {
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .project ul {
+      margin-top: 0.4rem;
+      padding-left: 1.1rem;
+      font-size: 0.88rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="title-block">
+        <h1>Chima Patrick O</h1>
+        <p>Penetration Tester & Cyber Security Professional</p>
+        <span class="badge">Open to roles in UK & Australia</span>
+      </div>
+      <div class="contact">
+        <div>Email: <a href="mailto:chimapatrick777@gmail.com">chimapatrick777@gmail.com</a></div>
+        <div>Phone: +44&nbsp;7449&nbsp;548944</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Professional Summary</h2>
+        <p>
+          Cyber security professional with hands-on experience in penetration testing,
+          vulnerability assessment and threat analysis. Skilled in Nmap, Metasploit,
+          Netdiscover, Kali Linux and Linux system hardening. Able to simulate real-world
+          attacker behaviour, document technical findings clearly, and propose practical
+          remediation steps for stakeholders.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Skills & Tools</h2>
+        <div class="chips">
+          <span class="chip">Penetration Testing</span>
+          <span class="chip">Vulnerability Assessment</span>
+          <span class="chip">Threat Analysis</span>
+          <span class="chip">Linux (Kali, Ubuntu)</span>
+          <span class="chip">Nmap</span>
+          <span class="chip">Metasploit</span>
+          <span class="chip">Netdiscover</span>
+          <span class="chip">Burp Suite</span>
+          <span class="chip">Wireshark</span>
+          <span class="chip">VMware / Virtual Labs</span>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <h2>Featured Projects</h2>
+      <p class="section-sub">
+        These projects are from my hands-on penetration testing and lab work. Replace any template text with your real details before using.
+      </p>
+
+      <div class="projects">
+        <!-- Project 1 -->
+        <article class="project">
+          <h3>Black-Box Internal Penetration Test</h3>
+          <small>Tools: Netdiscover, Nmap, Metasploit, Kali Linux</small>
+          <p>
+            Simulated an internal attacker on a VMware lab network targeting
+            host <code>192.168.110.135</code>. Performed reconnaissance,
+            service enumeration and exploitation leading to full system compromise.
+          </p>
+          <ul>
+            <li>Discovered services including ProFTPD, UnrealIRCd and Ruby on Rails.</li>
+            <li>Exploited ProFTPD mod_copy, UnrealIRCd backdoor and Rails ActionPack RCE.</li>
+            <li>Achieved remote shell access and demonstrated complete loss of CIA (confidentiality, integrity, availability).</li>
+          </ul>
+          <p>
+            <strong>Reporting:</strong> Delivered a structured report with executive
+            summary, technical details, risk ratings and remediation guidance.
+          </p>
+        </article>
+
+        <!-- Project 2 (template) -->
+        <article class="project">
+          <h3>Web Application Vulnerability Assessment (Template)</h3>
+          <small>Tools: Burp Suite, OWASP ZAP, Browser DevTools</small>
+          <p>
+            <em>Template text – update this with your own web app testing project.</em>
+            Example: Performed OWASP Top 10–aligned testing against a demo e-commerce
+            application, focusing on authentication, session handling and input
+            validation.
+          </p>
+          <ul>
+            <li>Mapped the application and identified key attack surface.</li>
+            <li>Tested for injection, XSS, CSRF and broken access control.</li>
+            <li>Produced a report with proof-of-concept payloads and mitigation steps.</li>
+          </ul>
+        </article>
+
+        <!-- Project 3 (template) -->
+        <article class="project">
+          <h3>Network Recon & Attack Path Mapping (Template)</h3>
+          <small>Tools: Nmap, Netdiscover, Diagramming tools</small>
+          <p>
+            <em>Template text – update with your own lab work.</em> Example:
+            Mapped a small lab network, identified exposed services and designed
+            potential attack paths from an initial foothold to high-value targets.
+          </p>
+          <ul>
+            <li>Performed host discovery and port scanning on multiple subnets.</li>
+            <li>Enumerated SMB/SSH/FTP/HTTP services and matched versions to known CVEs.</li>
+            <li>Created a visual attack path and prioritised misconfigurations.</li>
+          </ul>
+        </article>
+
+        <!-- Project 4 slot (future) -->
+        <article class="project">
+          <h3>Future Project Slot</h3>
+          <small>e.g. CTF write-ups, blue-team work, cloud security labs</small>
+          <p>
+            Use this space to add another real engagement or lab such as a
+            TryHackMe/HTB path, cloud security hardening, or incident response exercise.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>How to Contact Me</h2>
+      <p>
+        I am actively looking for opportunities as a <strong>Penetration Tester</strong> or
+        <strong>Cyber Security Analyst</strong>. For interviews, collaboration or access
+        to my full technical reports and lab notes, please reach out via:
+      </p>
+      <p>
+        Email:
+        <a href="mailto:chimapatrick777@gmail.com">chimapatrick777@gmail.com</a><br />
+        Phone: +44 7449 548944
+      </p>
+    </section>
+
+    <footer>
+      <span>© 2025 Chima Patrick O</span>
+      <span>Portfolio generated with the help of ChatGPT</span>
+    </footer>
+  </div>
+</body>
+</html>
